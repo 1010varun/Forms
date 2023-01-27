@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Register|Cricket</title>
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-container">
+            <h2 class="title">Registration form</h2>
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Men</label>
+                <label for="signup" class="slide signup">Women</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form action="#" class="login">
+                    <div class="field">
+                        <input type="text" placeholder="Team Leader" required>
+                    </div><br>
+
+                    <div class="field">
+                        <input type="email" placeholder="Email Id of Team Leader" required>
+                    </div><br>
+
+                    <div class="field">
+                        <input type="number" placeholder="Phone Number of Team Leader" required>
+                    </div><br>
+                    
+                    <div class="field">
+                        <input type="text" placeholder="College" required>
+                    </div><br>
+
+                    <div class="cr12">
+                        <label>Number of players:</label><br>
+                        <input type="checkbox" id="cr12" name="cr12" value="12">
+                        <label for="vehicle1">12</label><br>
+
+                        <input type="checkbox" id="cr12" name="cr12" value="12">
+                        <label for="vehicle1">15</label><br>
+                    </div><br>
+
+                    <div class="cr12">
+                        <label>Payable Amount: Rs4000</label>
+                    </div>
+
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+
+
+<!-- -------------------------------------------------------------------------- -->
+                <!-- Female portion -->
+                <form action="#" class="signup">
+                    <div class="field">
+                        <input type="text" placeholder="Team Leader" required>
+                    </div><br>
+
+                    <div class="field">
+                        <input type="email" placeholder="Email Id of Team Leader" required>
+                    </div><br>
+
+                    <div class="field">
+                        <input type="number" placeholder="Phone Number of Team Leader" required>
+                    </div><br>
+                    
+                    <div class="field">
+                        <input type="text" placeholder="College" required>
+                    </div><br>
+
+                    <div class="cr12">
+                        <label>Number of players:</label><br>
+                        <input type="checkbox" id="cr12" name="cr12" value="12">
+                        <label for="vehicle1">12</label><br>
+
+                        <input type="checkbox" id="cr12" name="cr12" value="12">
+                        <label for="vehicle1">15</label><br>
+                    </div><br>
+
+                    <div class="cr12">
+                        <label>Payable Amount: Rs2500</label>
+                    </div>
+
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+        signupBtn.onclick = (() => {
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (() => {
+            loginForm.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+        });
+        signupLink.onclick = (() => {
+            signupBtn.click();
+            return false;
+        });
+    </script>
+</body>
+
+</html>
